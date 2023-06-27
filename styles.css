@@ -2087,25 +2087,6 @@ html {
     display: grid;
   }
   
-  .w-layout-blockcontainer {
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-  
-  @media screen and (max-width: 991px) {
-    .w-layout-blockcontainer {
-      max-width: 728px;
-    }
-  }
-  
-  @media screen and (max-width: 767px) {
-    .w-layout-blockcontainer {
-      max-width: none;
-    }
-  }
-  
   .navbar {
     width: 100%;
     float: right;
@@ -2172,12 +2153,14 @@ html {
   .nav-links {
     color: #0075e2;
     text-transform: uppercase;
+    flex-direction: row;
     margin-left: 10px;
     margin-right: 10px;
     padding: 0;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
     text-decoration: none;
-    transition: opacity .2s;
+    transition: color .2s;
+    display: block;
   }
   
   .nav-links:hover {
@@ -2212,8 +2195,10 @@ html {
     height: 100vh;
     color: #1d4e89;
     background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url("https://uploads-ssl.webflow.com/649a7d30d0a1ee8984dba899/649a7e60532aba904008d103_best-sticker-paper-for-a-cricut-11-of-12-683x1024.jpg");
-    background-position: 0 0, 100%;
-    background-size: auto, cover;
+    background-position: 0 0, 50%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, 100vw;
+    background-attachment: scroll, fixed;
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 0;
     flex-flow: column;
@@ -3096,6 +3081,76 @@ html {
     transform: scale(1.3);
   }
   
+  .container-4 {
+    width: 1000px;
+    max-width: none;
+    flex-wrap: nowrap;
+    order: 0;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    position: relative;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: auto;
+  }
+  
+  .image-10 {
+    width: auto;
+    height: 50px;
+    display: block;
+    position: relative;
+  }
+  
+  .navbar-2 {
+    clear: none;
+    background-color: rgba(221, 221, 221, 0);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+  }
+  
+  .brand {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    order: -1;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    justify-content: flex-start;
+    align-self: center;
+    display: block;
+    position: relative;
+    top: 0%;
+    bottom: 0%;
+    left: auto;
+    right: auto;
+  }
+  
+  .nav-menu {
+    width: auto;
+    float: right;
+    flex-flow: row;
+    flex: 0 auto;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+  }
+  
   @media screen and (max-width: 991px) {
     .navbar {
       background-color: red;
@@ -3201,6 +3256,11 @@ html {
   }
   
   @media screen and (max-width: 767px) {
+    .landing-content {
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://uploads-ssl.webflow.com/649a7d30d0a1ee8984dba899/649a7e60532aba904008d103_best-sticker-paper-for-a-cricut-11-of-12-683x1024.jpg");
+      background-attachment: scroll, fixed;
+    }
+  
     .hero-heading-left, .testimonial-slider-small {
       padding: 60px 15px;
     }
@@ -3303,6 +3363,41 @@ html {
   }
   
   @media screen and (max-width: 479px) {
+    .navbar {
+      background-color: #e9dede;
+    }
+  
+    .nav-container {
+      display: block;
+    }
+  
+    .image-5 {
+      transition: opacity .2s;
+      transform: scale(.8);
+    }
+  
+    .landing-content {
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+      -webkit-text-fill-color: inherit;
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://uploads-ssl.webflow.com/649a7d30d0a1ee8984dba899/649a7e60532aba904008d103_best-sticker-paper-for-a-cricut-11-of-12-683x1024.jpg");
+      background-position: 0 0, 50% 0;
+      background-repeat: repeat, no-repeat;
+      background-size: auto, 100vw 100vh;
+      background-attachment: scroll, fixed;
+      background-clip: border-box;
+      flex-flow: column;
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-columns: 1fr;
+      display: flex;
+    }
+  
+    .text-block-3 {
+      text-align: center;
+      font-size: 30px;
+    }
+  
     .container-2 {
       max-width: none;
     }
@@ -3363,6 +3458,10 @@ html {
       margin-bottom: 10px;
     }
   
+    .heading {
+      font-size: 26px;
+    }
+  
     .gallery-wrapper {
       grid-template-columns: 1fr;
     }
@@ -3374,6 +3473,7 @@ html {
   
     .centered-heading-2 {
       margin-bottom: 24px;
+      font-size: 26px;
     }
   
     .pricing-grid {
@@ -3401,6 +3501,30 @@ html {
       align-items: flex-start;
     }
   
+    .form-block {
+      display: block;
+    }
+  
+    .textarea-2 {
+      width: 300px;
+      padding-bottom: 0;
+    }
+  
+    .form-4 {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .input {
+      display: block;
+    }
+  
+    .heading-3 {
+      width: 100vw;
+      font-size: 26px;
+      position: relative;
+    }
+  
     .footer-form-two-2 {
       padding: 20px;
     }
@@ -3415,6 +3539,31 @@ html {
       margin-bottom: 10px;
       padding-right: 20px;
     }
+  
+    .heading-5 {
+      font-size: 26px;
+    }
+  
+    .image-9 {
+      max-width: 70px;
+      display: block;
+      position: relative;
+    }
+  
+    .container-4 {
+      justify-content: space-between;
+      display: flex;
+    }
+  
+    .image-10 {
+      height: 50px;
+      margin-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .heading-6, .heading-7 {
+      font-size: 18px;
+    }
   }
   
   #w-node-d358a014-b337-b46d-b251-fed79aea45e7-84dba8ad, #w-node-d358a014-b337-b46d-b251-fed79aea45e8-84dba8ad, #w-node-d358a014-b337-b46d-b251-fed79aea45e9-84dba8ad, #w-node-d358a014-b337-b46d-b251-fed79aea45ea-84dba8ad, #w-node-d358a014-b337-b46d-b251-fed79aea45eb-84dba8ad, #w-node-fe417472-f82e-e476-4771-5afb41203c2a-84dba8ad, #w-node-_048bb7a3-9528-753f-5971-2e756bbf286f-84dba8ad, #w-node-_048bb7a3-9528-753f-5971-2e756bbf2870-84dba8ad, #w-node-_048bb7a3-9528-753f-5971-2e756bbf2871-84dba8ad, #w-node-_048bb7a3-9528-753f-5971-2e756bbf2872-84dba8ad, #w-node-_048bb7a3-9528-753f-5971-2e756bbf2874-84dba8ad, #w-node-_048bb7a3-9528-753f-5971-2e756bbf2876-84dba8ad, #w-node-_048bb7a3-9528-753f-5971-2e756bbf2875-84dba8ad, #w-node-_048bb7a3-9528-753f-5971-2e756bbf2877-84dba8ad, #w-node-_048bb7a3-9528-753f-5971-2e756bbf2878-84dba8ad, #w-node-ee825637-3abc-a557-32de-28c0107dbb04-84dba8ad, #w-node-ee825637-3abc-a557-32de-28c0107dbb18-84dba8ad {
@@ -3423,4 +3572,5 @@ html {
   
   #field.w-node-ac21d2d4-e21c-ea52-4149-193320330cdb-84dba8ad {
     grid-area: Area;
-  }  
+  }
+  
