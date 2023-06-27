@@ -1346,6 +1346,10 @@ html {
       padding-left: 10px;
     }
   }
+
+  .w-webflow-badge {
+    display: none;
+  }
   
   .w-lightbox-backdrop {
     cursor: auto;
