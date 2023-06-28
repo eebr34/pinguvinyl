@@ -3113,7 +3113,7 @@ textarea.w-input, textarea.w-select {
 .container-5 {
   width: 70%;
   max-width: none;
-  align-self: center;
+  align-self: flex-start;
   display: block;
 }
 
@@ -3533,6 +3533,19 @@ textarea.w-input, textarea.w-select {
 
   .heading-6, .heading-7 {
     font-size: 18px;
+  }
+
+  .section-3 {
+    height: 250px;
+    align-items: center;
+  }
+
+  .container-5 {
+    width: 100%;
+    flex: none;
+    align-self: center;
+    margin-left: 40px;
+    margin-right: 40px;
   }
 }
 
