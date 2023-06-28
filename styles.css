@@ -292,8 +292,15 @@ html[data-w-dynpage] [data-w-cloak] {
   color: rgba(0, 0, 0, 0) !important;
 }
 
-.w-webflow-badge{
+.w-webflow-badge {
   display: none;
+}
+
+.w-webflow-badge > img {
+  visibility: visible !important;
+  opacity: 1 !important;
+  vertical-align: middle !important;
+  display: inline-block !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2533,6 +2540,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .heading {
+  color: #7689de;
   font-family: Roboto Slab, sans-serif;
   font-size: 38px;
   position: relative;
@@ -2646,7 +2654,10 @@ textarea.w-input, textarea.w-select {
 }
 
 .pricing-overview {
+  background-color: #a9dce3;
   border-bottom: 1px solid #e4ebf3;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 80px 30px;
   position: relative;
 }
@@ -2655,6 +2666,10 @@ textarea.w-input, textarea.w-select {
   text-align: center;
   margin-bottom: 16px;
   font-size: 38px;
+}
+
+.centered-heading-2.heading {
+  color: #7689de;
 }
 
 .pricing-description {
@@ -2927,6 +2942,10 @@ textarea.w-input, textarea.w-select {
   font-size: 38px;
 }
 
+.heading-3.heading {
+  color: #7689de;
+}
+
 .footer-form-two-2 {
   background-color: #f5f7fa;
   margin-bottom: 40px;
@@ -3059,6 +3078,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .heading-6, .heading-7 {
+  color: #7689de;
   font-family: Roboto Slab, sans-serif;
 }
 
